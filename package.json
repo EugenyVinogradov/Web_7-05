@@ -1,0 +1,25 @@
+{
+  "name": "7-05",
+  "version": "1.0.0",
+  "description": "Homework Web_7-05",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "cucumber": "cucumber-js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EugenyVinogradov/Web_7-05.git"
+  },
+  "author": "Vinogradov Eugeny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EugenyVinogradov/Web_7-05/issues"
+  },
+  "homepage": "https://github.com/EugenyVinogradov/Web_7-05#readme",
+  "devDependencies": {
+    "jest": "^29.3.0",
+    "puppeteer": "^19.2.2"
+  }
+}

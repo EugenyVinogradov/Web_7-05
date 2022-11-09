@@ -1,0 +1,4 @@
+{
+    "git.ignoreLimitWarning": true,
+    "debug.javascript.codelens.npmScripts": "all"
+}
