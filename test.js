@@ -1,6 +1,5 @@
 const { clickElement, getText } = require("./lib/commands.js");
 const { reservationOneOrTwoTikets } = require("./lib/commands2.js");
-const puppeteer = require("puppeteer");
 
 let page;
 
@@ -52,7 +51,5 @@ describe("Tikets reservation tests", () => {
     ".acceptin-button");
     const actual = await page.$eval(".acceptin-button", (link) => link.getAttribute("disabled"));
     await expect(actual).toContain("true");
-    // const actual1 = getText(page, "body > main > section:nth-child(1) > div:nth-child(2) > h3");
-    // await expect(page).toMatch('body > main > section:nth-child(1) > div:nth-child(2) > h3');
   });
 });  
