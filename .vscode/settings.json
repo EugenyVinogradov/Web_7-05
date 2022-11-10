@@ -1,4 +1,7 @@
 {
     "git.ignoreLimitWarning": true,
-    "debug.javascript.codelens.npmScripts": "all"
+    "debug.javascript.codelens.npmScripts": "all",
+    "cucumberautocomplete.steps": "./features/step_definitions/*.js",
+    "cucumberautocomplete.strictGherkinCompletion": false,
+    
 }

@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "cucumber": "cucumber-js"
-
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,13 @@
   },
   "homepage": "https://github.com/EugenyVinogradov/Web_7-05#readme",
   "devDependencies": {
-    "jest": "^29.3.0",
-    "puppeteer": "^19.2.2"
+    "chai": "^4.3.7",
+    "jest": "^29.3.1",
+    "jest-puppeteer": "^6.1.1",
+    "puppeteer": "^19.2.2",
+    "puppeteer-xpath": "^0.1.0"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.7"
   }
 }

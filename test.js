@@ -5,6 +5,7 @@ let page;
 
 beforeEach(async () => {
   page = await browser.newPage();
+  await page.goto("http://qamid.tmweb.ru/client/index.php");
   await page.setDefaultNavigationTimeout(0);
 });
 
@@ -13,11 +14,8 @@ afterEach(() => {
 });
 
 describe("Tikets reservation tests", () => {
-  beforeEach(async () => {
-    page = await browser.newPage();
-    await page.goto("http://qamid.tmweb.ru/client/index.php");
-  });
-  test("Reservation one tiket today", async () => {
+  test("Reservation one ticket tomorrow", async () => {
+    await clickElement(page, "body > nav > a:nth-child(2)");
     await reservationOneOrTwoTikets(page, "[data-seance-id='129']", 
       "body > main > section > div.buying-scheme > div.buying-scheme__wrapper > div:nth-child(1) > span:nth-child(5)", 
       "body > main > section > div.buying__info > div > h2",
@@ -27,7 +25,7 @@ describe("Tikets reservation tests", () => {
     const actual2 = await getText(page, "body > main > section > div > p:nth-child(2) > span");
     await expect(actual2).toContain("1/5");
   });
-  test("Reservation two tikets on fourth day", async () => {
+  test("Reservation two tickets on fourth day", async () => {
     await clickElement(page, "body > nav > a:nth-child(4)");
     await reservationOneOrTwoTikets(page, "[data-seance-id='94']", 
     "body > main > section > div.buying-scheme > div.buying-scheme__wrapper > div:nth-child(1) > span:nth-child(4)", 
@@ -38,7 +36,7 @@ describe("Tikets reservation tests", () => {
     const actual2 = await getText(page, "body > main > section > div > p:nth-child(2) > span");
     await expect(actual2).toContain("1/4, 1/5");
   });
-  test("Not reservation one tiket today  to already reserved seat", async () => {
+  test("Not reservation one ticket today  to already reserved seat", async () => {
     await reservationOneOrTwoTikets(page, "[data-seance-id='129']", 
     "body > main > section > div.buying-scheme > div.buying-scheme__wrapper > div:nth-child(10) > span:nth-child(5)", 
     "body > main > section > div.buying__info > div > h2",
