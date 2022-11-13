@@ -2,8 +2,7 @@ Feature: Reservation ticket
     Scenario: Should reservation ticket one ticket today
         Given user is on "http://qamid.tmweb.ru/client/index.php" page
         When user books a ticket for the session tomorrow at "19:00", seat "5" in the "2" st row
-        Then user sees the inscription "Вы выбрали билеты:" and sees the reserved seat "5" in the row "2"
-# Feature: Reservation tickets    
+        Then user sees the inscription "Вы выбрали билеты:" and sees the reserved seat "5" in the row "2" 
     Scenario: Should reservation two tickets on fourth day
         Given user is on "http://qamid.tmweb.ru/client/index.php" page
         When user books two tickets for the session on "4" day at "14:00", seats "4" and "5" in the "3" st row    
