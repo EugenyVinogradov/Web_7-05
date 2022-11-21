@@ -14,3 +14,4 @@ Feature: Reservation ticket
         When user selected the session on 1 day
         When user books a ticket for the session at "19:00", seat "6" in the 10 st row and this seat is already reserved   
         Then user sees that the resrvation button is inactive     
+
